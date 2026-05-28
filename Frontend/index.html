@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestor de Usuarios</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- import map: Pinia necesita vue-demi y @vue/devtools-api -->
+    <script type="importmap">
+      {
+        "imports": {
+          "vue": "https://cdn.jsdelivr.net/npm/vue@3.5.13/dist/vue.esm-browser.js",
+          "vue-router": "https://cdn.jsdelivr.net/npm/vue-router@4.5.0/dist/vue-router.esm-browser.js",
+          "vue-demi": "https://cdn.jsdelivr.net/npm/vue-demi@0.14.10/lib/v3/index.mjs",
+          "@vue/devtools-api": "https://cdn.jsdelivr.net/npm/@vue/devtools-api@6.6.4/lib/esm/index.js",
+          "pinia": "https://cdn.jsdelivr.net/npm/pinia@2.3.1/dist/pinia.esm-browser.js"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="app">
+      <p style="text-align:center;padding:2rem;color:#64748b">Cargando aplicación…</p>
+    </div>
+    <script>
+      function showBootError(msg) {
+        document.getElementById('app').innerHTML =
+          '<div style="max-width:640px;margin:2rem auto;padding:1rem;background:#fef2f2;border:1px solid #fecaca;border-radius:8px;color:#991b1b">' +
+          '<strong>No se pudo iniciar la app</strong><p style="margin:0.5rem 0 0;font-size:0.9rem">' +
+          msg +
+          '</p><p style="margin:0.75rem 0 0;font-size:0.85rem;color:#7f1d1d">Abre esta página con un servidor HTTP (no como archivo local). Ej: <code>python -m http.server 8080</code></p></div>'
+      }
+      window.addEventListener('error', function (e) {
+        showBootError(e.message || 'Error desconocido')
+      })
+      window.addEventListener('unhandledrejection', function (e) {
+        showBootError(e.reason && (e.reason.message || String(e.reason)) || 'Error al cargar módulos')
+      })
+    </script>
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
