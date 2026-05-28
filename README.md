@@ -1,7 +1,7 @@
-<<<<<<< HEAD
+
 # GestionUsuario — Auth & User Management API
 
-Microservicio Spring Boot para autenticación JWT y gestión completa de usuarios, roles y permisos. Basado en la arquitectura de **MyPlans Auth**.
+Microservicio Spring Boot para autenticación JWT y gestión completa de usuarios, roles y permisos.
 
 ---
 
@@ -118,5 +118,3 @@ Swagger UI disponible en: **http://localhost:8091/swagger-ui.html**
 - Usuarios recién registrados quedan **inactivos** hasta activación manual por admin
 - Respuestas de error uniformes con `timestamp`, `status`, `error` y `message`
 =======
-# GestorUsuarios
->>>>>>> cee5baa0e43a0e11496e9836da7c048bebe48839
