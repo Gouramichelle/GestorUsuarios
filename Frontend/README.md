@@ -27,7 +27,7 @@ Frontend/
 ## Cómo ejecutar
 
 ```powershell
-cd c:\Workspace\G-U\GestorUsuarios\Frontend
+cd c:\Workspace\Fullstack\GestorUsuarios\Frontend
 python -m http.server 8080
 ```
 
